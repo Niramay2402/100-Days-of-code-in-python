@@ -5,7 +5,7 @@ print(logo)
 correct_ans = random.randint(1, 101)
 
 
-print("Welcome to the Guessing Game!!! \n I'm thinking of a number between 1 to 100")
+print("Welcome to the Guessing Game!!! \nI'm thinking of a number between 1 to 100")
 #print(f"Correct Guess is {correct_ans}")
 level = input("Choose difficulty level: 'hard' or 'easy': ")
 
@@ -27,3 +27,6 @@ while not attempts == 0:
     elif guessed_num < correct_ans:
         attempts -= 1
         print("Too Low")
+
+if attempts == 0:
+    print(f"You ran out of the attempts... You Lose. \nNumber to be Guessed was {correct_ans} ")
