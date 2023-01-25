@@ -4,8 +4,9 @@ import random
 print(logo)
 correct_ans = random.randint(1, 101)
 
+
 print("Welcome to the Guessing Game!!! \nI'm thinking of a number between 1 to 100")
-# print(f"Correct Guess is {correct_ans}")
+print(f"Correct Guess is {correct_ans}")
 level = input("Choose difficulty level: 'hard' or 'easy': ")
 
 if level == 'easy':
@@ -13,8 +14,6 @@ if level == 'easy':
 elif level == 'hard':
     attempts = 5
 
-# a variable that would help avoid printing losing statements
-# when we guess the correct number and get out of the loop
 if_guessed_right = 0
 
 while not attempts == 0:
@@ -22,8 +21,8 @@ while not attempts == 0:
     guessed_num = int(input("Guess a Number: "))
 
     if guessed_num == correct_ans:
-        attempts = 0  # To get out of the While Loop
-        if_guessed_right = 1  # To avoid printing the Losing statement
+        attempts = 0
+        if_guessed_right = 1
         print(f"Guessed it right...The Answer was {correct_ans}.")
     elif guessed_num > correct_ans:
         attempts -= 1
