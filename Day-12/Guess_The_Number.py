@@ -15,7 +15,7 @@ elif level == 'hard':
 
 # a variable that would help avoid printing losing statements
 # when we guess the correct number and get out of the loop
-if_guessed_right = 0
+if_guessed_right = False
 
 while not attempts == 0:
     print(f"You have {attempts} attempts remaining to guess the number")
@@ -23,7 +23,7 @@ while not attempts == 0:
 
     if guessed_num == correct_ans:
         attempts = 0  # To get out of the While Loop
-        if_guessed_right = 1  # To avoid printing the Losing statement
+        if_guessed_right = True  # To avoid printing the Losing statement
         print(f"Guessed it right...The Answer was {correct_ans}.")
     elif guessed_num > correct_ans:
         attempts -= 1
@@ -32,5 +32,5 @@ while not attempts == 0:
         attempts -= 1
         print("Too Low")
 
-if attempts == 0 and if_guessed_right != 1:
+if attempts == 0 and if_guessed_right is False:
     print(f"You ran out of the attempts... You Lose. \nNumber to be Guessed was {correct_ans} ")
