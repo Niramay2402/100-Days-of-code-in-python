@@ -43,11 +43,17 @@ def calculator():
         answer = function(num1, num2)
         print(f"{num1} {operation_symbol} {num2} = {answer}")
 
-        if input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation..? ") == 'y':
+        intAns = input(f"Type 'y' to continue calculating with {answer}, or type 'n' to start a new calculation..? "
+                       f"\nEnter anything else to end...")
+
+        if intAns == 'y':
             num1 = answer
-        else:
+        elif intAns == 'n':
             ans = False
             calculator()
+        else:
+            print("Goodbye!")
+            break
 
 
 calculator()
