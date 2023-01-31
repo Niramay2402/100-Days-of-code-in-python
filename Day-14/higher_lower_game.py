@@ -16,15 +16,6 @@ P1 = (player1['follower_count'])
 P2 = (player2['follower_count'])
 
 
-# def compare_players(player1, player2):
-#
-#     if player1["follower_count"] > player2["follower_count"]:
-#         return player1["name"]
-#     elif player1["follower_count"] < player2["follower_count"]:
-#         return player2["name"]
-#     else:
-#         return "It's a tie!"
-
 score = 0
 right_choice = True
 
