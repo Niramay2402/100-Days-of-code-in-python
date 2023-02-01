@@ -67,9 +67,9 @@ while is_on:
         if is_resource_sufficient(drink["ingredients"]):
             payment = process_coins()
             if is_transaction_successful(payment, drink_cost=drink["cost"]):
-                make_coffee(drink["name"], drink["ingredients"])
+                make_coffee(choice, drink["ingredients"])
     else:
         print("Sorry, that's not a valid choice.")
-        
+
 
 
