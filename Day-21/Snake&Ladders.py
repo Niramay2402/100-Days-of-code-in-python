@@ -1,4 +1,4 @@
-# This is Snake and Ladders Part - 1
+# This is Snake and Ladders Part - 2
 from turtle import Screen
 from snake import Snake
 from food import Food
@@ -42,12 +42,9 @@ while game_is_on:
 
     # detect tail collision
 
-    for segment in snake.segments:
-        if segment == snake.head:
-            pass
-        elif snake.head.distance(segment) < 10:
-            game_is_on= False
+    for segment in snake.segments[1:]:
+        if snake.head.distance(segment) < 10:
+            game_is_on = False
             Scoreboard.game_over()
-
 
 screen.exitonclick()
