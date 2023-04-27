@@ -26,4 +26,13 @@ while game_is_on:
     car_manager.move_cars()
 
     if player.ycor() == 240:
-        player.reset_position()
+        player.lvl_update()
+
+    for car in car_manager.all_cars:
+        if car.distance(player) < 20:
+            game_is_on = False
+            level.game_over()
+
+
+
+screen.exitonclick()
